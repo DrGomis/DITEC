@@ -8,6 +8,7 @@
 
 # Fuentes y herramientas
 - [Remix (Solidity)](https://remix.ethereum.org/)
+- [MetaMask Wallet](https://metamask.io/)
 - [Documentación Solidity](https://solidity.readthedocs.io/en/v0.6.4/)
 - [Imagen de carga](https://loading.io/)
 - [(JS) Cuenta atrás](https://www.w3schools.com/howto/howto_js_countdown.asp)
