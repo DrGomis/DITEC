@@ -1,0 +1,251 @@
+/* Contenido */
+body {
+  font: 8pt Verdana;
+	line-height: 18px;
+	text-align: center;
+	color: #444;
+}
+
+/* Secciones */
+.seccion {
+	margin: 10px 30px 0px 0px;
+	border: 1px #999 solid;
+	padding: 5px;
+	background: #fff;
+  text-align: center;
+}
+
+.lateral {
+	width: 20%;
+	float: left;
+	font: 8pt Verdana;
+	line-height: 18px;
+	text-align: left;
+}
+
+.lateral p {
+	margin: 0px 0px 5px 0px;
+	text-align: left;
+}
+
+/* Estructura */
+#estructura_web {
+	width: 95%;
+	margin: 5px auto auto 50px;
+}
+
+#estructura_admin {
+	width: 40%;
+	margin: 5px auto auto 30%;
+}
+
+.sin_borde { /* Sección */
+  margin: 10px 30px 0px 0px;
+  border: 0px #999 solid;
+  padding: 5px;
+  background: #fff;
+  text-align: center;
+}
+
+#bloque_central {
+	width: 75%;
+	float: left;
+}
+
+#bloque_central p {
+	text-align: left;
+	margin: 0px 0px 10px 0px;
+}
+
+#fin {
+	visibility: hidden;
+}
+
+/* ESTILO */
+#contador, #objetivo {
+    width:49%;
+    /*border:1px solid #379AA4;*/
+    margin-top: 25px;
+}
+
+#contador span, #objetivo span {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #999;
+}
+
+#menu {
+  background: url("../img/link.gif") no-repeat left center;
+  padding-left: 12px;
+}
+
+h1.cabecera {
+	font: bold 10pt Verdana;
+  text-transform: uppercase;
+	text-align: center;
+	margin: -5px -5px 5px -5px;
+	color: #fff;
+	padding: 5px;
+	background: #379AA4;
+}
+
+
+hr {
+	border: 1px #ccc solid;
+	border-width: 1px 0px 0px 0px;
+	clear: both;
+}
+
+/* Botones y demás */
+
+/* Robado de aquí: https://css-tricks.com/css3-progress-bars/ */
+.progreso {
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #0b3954;
+	border: 2px solid #0b3954;
+}
+
+.progreso > span {
+  display: block;
+  height: 100%;
+  background-color: #379AA4;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.progreso > span:after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .2) 50%,
+    rgba(255, 255, 255, .2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+/* Formulario robado de aquí: https://www.sanwebe.com/2014/08/css-html-forms-designs */
+.formulario{
+	max-width: 500px;
+	padding: 20px 12px 10px 20px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+
+.formulario label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.formulario label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+
+.formulario .fecha-dia-mes{
+	width: 40px;
+	text-align: center;
+}
+.fecha-anual {
+  width: 55px;
+  text-align: center;
+}
+
+.formulario input.input-field, .formulario .select-field{
+	width: 48%;
+}
+.formulario input.input-field,
+.formulario .fecha-dia-mes, .fecha-anual,
+.formulario .textarea-field,
+ .formulario .select-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+.formulario .input-field:focus,
+.formulario .fecha-dia-mes:focus,
+.formulario .fecha-anual:focus,
+.formulario .textarea-field:focus,
+.formulario .select-field:focus{
+	border: 1px solid #0C0;
+}
+.formulario .textarea-field{
+	height:100px;
+	width: 55%;
+}
+.formulario button[type=submit] {
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #3498db;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.formulario button[type=submit]:hover {
+	background: #2980b9;
+	color: #fff;
+}
+
+/* Referencia para colores https://uxmovement.com/buttons/how-button-color-contrast-guides-users-to-action/ */
+.formulario button[type=matar] {
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #fff;
+	color: #e84118;
+  font-weight: bold;
+  border-radius: 3px;
+	border: solid 1px #e84118;
+
+}
+.formulario button[type=matar]:hover {
+	background: #c23616;
+	color: #fff;
+  border-radius: 3px;
+  border: solid 1px #e84118;
+
+}

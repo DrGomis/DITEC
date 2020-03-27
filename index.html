@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- Informació Meta -->
+	<meta charset="utf-8"/>
+	<meta name="description" content="Crowdfunding casero">
+	<meta name="author" content="Vicente Gomis">
+	<!-- GOOGLE font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+	<!-- Enllaç a l'arxiu CSS Extern -->
+	<link rel=stylesheet href="css/style.css" type="text/css"/>
+	<!-- Enllaç a web3 -->
+	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<!-- Enllaç a jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+	<!-- Enllaç a Javascript Extern -->
+	<script  type="text/javascript" src="js/javascript.js"></script>
+	<!-- favicon -->
+	<link href="img/favicon.png" rel="icon" type="image/png" />
+	<!-- Títol de la pàgina -->
+	<title>DITEC :: Crowdfunding</title>
+</head>
+<body>
+	<!-- Estructura básica de la página web -->
+	<div id="estructura_web">
+	<!-- Contenido central -->
+		<div id="bloque_central">
+		<!--NOMBRE PROYECTO -->
+			<div class="seccion sin_borde">
+				<h1 style="font-size: 50px; text-transform: uppercase;" id="mostrar_nombre_proyecto"> Nombre no definido </h1>
+			</div>
+
+			<!-- ADMINISTRAR-->
+			<div class="seccion sin_borde" id="menu_administrador">
+				<a href="administrar.html" id="menu" style="float: right">Administrar</a>
+			</div>
+
+		<!-- INFORMACIÓN DEL PROYECTO -->
+			<div class="seccion">
+				<h1 class="cabecera">Información</h1>
+				<div id='contador' style="float: left">
+					<span style="font-size: 20px; text-transform: uppercase">Tiempo restante</span>
+					<br/><br/>
+					<div>
+						<span id="countdown"><img src="img/cargando.gif"/></span>
+					</div>
+
+				</div>
+				<div id='objetivo' style="float: right">
+					<span style="font-size: 20px; text-transform: uppercase">Estado: <span style="font-size: 20px;" id="mostrar_porcentaje"><font color='red'>No definido</font></span></span>
+					<br/><br/>
+					<div>
+						<span id="recaudado"><img src="img/cargando.gif"/></span>
+						<span>/</span>
+						<span id="meta"><img src="img/cargando.gif"/></span>
+						<span>€</span>
+					</div>
+				</div>
+				<!-- Barra de progreso -->
+				<hr style="visibility: hidden"/>
+				<div class="progreso">
+					<span id="progreso" style="width: 0%"></span>
+				</div>
+				<hr style="visibility: hidden"/>
+
+				<p id="mostrar_desc_proyecto">Descripción no definida.</p>
+
+
+
+				<p id="mostrar_usuario"></p>
+
+				<p id="mostrar_dinero_usuario"></p>
+				<br/>
+			</div>
+
+		</div>
+		<!-- Contenido de la derecha -->
+		<div class="lateral">
+			<!-- DONAR -->
+			<div class="seccion">
+				<h1 class="cabecera">Colabora con el proyecto</h1>
+				<p style="text-align: center">Introduce tu <strong>nombre de usuario</strong> y la cantidad de <strong>euros</strong> que quieres aportar.</p>
+				<div class="formulario" style="margin: -15px;">
+					<input type="text" class="input-field" id="usuario" placeholder='Nombre' maxlength="15"/>
+					<br/>
+					<input type="text" class="input-field" id="cantidad" placeholder="Cantidad (€)" maxlength="7"/>
+					<br/>
+
+					<button type="submit" id="colaborar" style="margin: 10px;">COLABORAR</button><br/>
+				</div>
+			</div>
+			<!--RECOMPENSAS-->
+			<div class="seccion">
+				<h1 class="cabecera">RECOMPENSAS</h1>
+					Desbloquearás las siguientes recompensas <strong>dependiendo de lo que contribuyas</strong>:
+					<hr style="visibility: hidden"/>
+					<span id="lista_recompensas"></span>
+					<hr style="visibility: hidden"/>
+			</div>
+
+		</div>
+		<!--END-->
+		<hr id="fin"/>
+	</div>
+
+</body>
+</html>

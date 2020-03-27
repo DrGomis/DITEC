@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- GOOGLE font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+	<!-- Enllaç a l'arxiu CSS Extern -->
+	<link rel=stylesheet href="css/style.css" type="text/css"/>
+	<!-- Enllaç a web3 -->
+	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<!-- Enllaç a jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+	<!-- Enllaç a Javascript Extern -->
+	<script  type="text/javascript" src="js/javascript.js"></script>
+	<!-- favicon -->
+	<link href="img/favicon.png" rel="icon" type="image/png" />
+	<!-- Títol de la pàgina -->
+	<title>DITEC :: Administración</title>
+</head>
+<body>
+	<!-- Estructura básica de la página web -->
+	<div id="estructura_admin">
+	<!-- Contenido central -->
+		<div>
+		<!--NOMBRE PROYECTO -->
+			<div class="seccion sin_borde">
+				<h1 style="font-size: 50px; text-transform: uppercase;"> Administración </h1>
+			</div>
+
+			<!-- VOLVER-->
+			<div class="seccion sin_borde" id="menu_administrador">
+				<a href="index.html" id="menu" style="float: left">Volver</a>
+			</div>
+
+
+		<!-- AJUSTES BÁSICOS DEL PROYECTO -->
+			<div class="seccion" style="text-align: left">
+
+				<h1 class="cabecera">Información básica</h1>
+
+				<div class="formulario">
+					<!-- Nombre -->
+					<label>
+						<span>Nombre</span>
+						<input type="text" class="input-field" id="nombre_proyecto" placeholder="Nombre del proyecto" maxlength="22" />
+					</label>
+					<!-- Objetivo -->
+					<label>
+						<span>Objetivo (€)</span>
+						<input type="text" class="input-field" id="objetivo_proyecto" placeholder="Objetivo a llegar en euros" maxlength="7" />
+					</label>
+					<!-- Fecha límite -->
+					<label>
+						<span>Fecha límite</span>
+						<input type="text" class="fecha-dia-mes" id="dia_proyecto" placeholder="31" maxlength="2" />
+						/
+						<input type="text" class="fecha-dia-mes" id="mes_proyecto" placeholder="12" maxlength="2"  />
+						/
+						<input type="text" class="fecha-anual" id="ano_proyecto" placeholder="2020" maxlength="4" />
+					</label>
+					<!-- Descripción -->
+					<label>
+						<span>Descripción</span>
+						<textarea class="textarea-field" id="desc_proyecto" placeholder="Añade una descripción en HTML."></textarea>
+					</label>
+							<button type="matar" id="matar" style="margin: 0 0 0 20%">ELIMINAR PROYECTO</button>
+							<button type="submit" id="crear_proyecto">GUARDAR</button>
+
+
+
+
+			</div>
+		</div>
+		<!-- AJUSTES RECOMPENSAS -->
+		<div class="seccion">
+			<h1 class="cabecera">Recompensas</h1>
+			<p>Las recompensas <strong>premian</strong> a las personas que colaboran en tu proyecto.<br/>
+				Un contribuyente <strong>desbloquea una recompensa</strong> cuando ha aportado el <strong>valor equivalente</strong> a ella.<br/>
+			Puedes revisar las recompensas que has creado <a href="index.html"><u>aquí	</u></a>.</p>
+
+
+			<div class="formulario" style="text-align: left">
+				<!-- Nombre de la recompensa -->
+				<label>
+					<span>Recompensa</span>
+					<input type="text" class="input-field" id="nombre_recompensa" placeholder="Nombre de la recompensa" maxlength="30" />
+				</label>
+				<!-- Objetivo -->
+				<label>
+					<span>Valor (€)</span>
+					<input type="text" class="input-field" id="valor_recompensa" placeholder="Cantidad necesaria" maxlength="7" />
+				</label>
+				<label>
+					<span></span>
+						<button type="submit" id="crear_recompensa">AÑADIR RECOMPENSA</button>
+				</label>
+		</div>
+
+		</div>
+
+		<div class="seccion">
+			<h1 class="cabecera">Colaboradores</h1>
+			<p>Lista de los <strong>usuarios que han colaborado</strong> en el proyecto ordenados por antigüedad.<br/>
+			Los nombres de usuario <strong>se consideran IDs</strong> así que si un mismo usuario colabora, <strong>no se añade de nuevo a la lista</strong>, únicamente se <u>actualiza su aportación</u>.</p>
+
+			<span id="usuario_contribuidor" style="text-align: left"></span>
+			<span id="dinero_contribuido" style="text-align: right"></span>
+			<hr style="visibility: hidden"/>
+
+
+
+
+		</div>
+
+		<!--END-->
+		<hr id="fin"/>
+	</div>
+</body>
+</html>
